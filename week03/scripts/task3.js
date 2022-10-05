@@ -52,8 +52,40 @@ buttton2.addEventListener("click", subtractNumbers)
 
 // Step 7: Using arrow functions, repeat Steps 1-5 with new functions named multiply and mulitplyNumbers and HTML form controls with IDs of factor1, factor2, product and multiplyNumbers
 
+//Could it also be written this way:
+//let factor1 = document.querySelector("#factor1").value
+//let factor2 = document.querySelector("#factor2").value
+//const multiply = (factor1, factor2) => {
+   // let product = factor1 * factor2;
+   // return product;
+//} 
+
+const multiply = (factor1, factor2) => {
+    let product = factor1 * factor2;
+    return product;
+}
+const multiplyNumbers = () => {
+    let factor1 = document.querySelector("#factor1").value;
+    let factor2 = document.querySelector("#factor2").value;
+    let product = multiply(factor1, factor2); 
+    document.querySelector("#difference").value = product
+}
+
+let button3 = document.querySelector("#multiplyNumbers")
+
+button3.addEventListener("click", multiplyNumbers)
+
+//aren't arrow functions anonymous? How can I have two functions "named" multiply and multiplyNumbers?
 
 // Step 8: Using any of the three function declaration types, repeat Steps 1-5 with new functions named divide and divideNumbers and HTML form controls with IDs of dividend, divisor, quotient and divideNumbers
+
+let dividend = document.querySelector("#dividend").value
+
+let divisor = document.querySelector("#divisor").value
+
+let quotient = function(dividend, divisor) {
+    return dividend/divisor;
+}
 
 // Step 9: Test all of the mathematical functionality of the task3.html page.
 
