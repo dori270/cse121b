@@ -16,8 +16,8 @@ function add(number1, number2){
 // Step 3: Step 3: Using function declaration, define another function named addNumbers that gets the values of two HTML form controls with IDs of addend1 and addend2. Pass them to the add function
 
 function addNumbers(){
-    let number1 = document.querySelector("#addend1").value;
-    let number2 = document.querySelector("#addend2").value;
+    let number1 = parseInt(document.querySelector("#addend1").value);
+    let number2 = parseInt(document.querySelector("#addend2").value);
     let sum = add(number1, number2);
 
 
@@ -40,7 +40,7 @@ let subtract = function(minuend, subtrahend){
 }
 
 let subtractNumbers = function(){
-    let minuend = document.querySelector("#minuend").value;
+    let minuend = parseInt(document.querySelector("#minuend").value);
     let subtrahend = document.querySelector("#subtrahend").value;
     let difference = subtract(minuend, subtrahend);
     document.querySelector("#difference").value = difference;
@@ -65,10 +65,10 @@ const multiply = (factor1, factor2) => {
     return product;
 }
 const multiplyNumbers = () => {
-    let factor1 = document.querySelector("#factor1").value;
-    let factor2 = document.querySelector("#factor2").value;
+    let factor1 = parseInt(document.querySelector("#factor1").value);
+    let factor2 = parseInt(document.querySelector("#factor2").value);
     let product = multiply(factor1, factor2); 
-    document.querySelector("#difference").value = product
+    document.querySelector("#product").value = product
 }
 
 let button3 = document.querySelector("#multiplyNumbers")
@@ -94,25 +94,51 @@ let quotient = function(dividend, divisor) {
 
 // Step 1: Declare and instantiate a variable of type Date to hold the current date
 
+let date = new Date();
+
 // Step 2: Declare a variable to hold the current year
+
+let currentYear = date.getFullYear();
+
+let currentMonth = date.getMonth();
 
 // Step 3: Using the variable declared in Step 1, call the built-in getFullYear() method/function and assign it to the variable declared in Step 2
 
+
+
 // Step 4: Assign the current year variable to an HTML form element with an ID of year
 
+
+document.querySelector("#year").innerHTML = `©️${currentMonth} ${currentYear}`;
 
 /* ARRAY METHODS */
 
 // Step 1: Declare and instantiate an array variable to hold the numbers 1 through 25
 
+let numbers = [];
+for(let i = 1; i <= 25; i++){
+    numbers.push(i);
+}
 // Step 2: Assign the value of the array variable to the HTML element with an ID of "array"
+
+document.querySelector("#array").innerHTML = numbers;
 
 // Step 3: Use the filter array method to find all of the odd numbers of the array variable and assign the reult to the HTML element with an ID of "odds" ( hint: % (modulus operartor) )
 
+document.querySelector("#odds").innerHTML = numbers.filter(number => number%2 !== 0);
+
 // Step 4: Use the filter array method to find all of the even numbers of the array variable and assign the result to the HTML element with an ID of "evens"
+
+document.querySelector("#evens").innerHTML = numbers.filter(number => number%2 === 0);
 
 // Step 5: Use the reduce array method to sum the array variable elements and assign the result to the HTML element with an ID of "sumOfArray"
 
+document.querySelector("#sumOfArray").innerHTML = numbers.reduce((x, y) => x + y);
+
 // Step 6: Use the map array method to multiple each element in the array variable by 2 and assign the result to the HTML element with an ID of "multiplied"
 
+document.querySelector("#multiplied").innerHTML = numbers.map(number => number*2);
+
 // Step 7: Use the map and reduce array methods to sum the array elements after multiplying each element by two.  Assign the result to the HTML element with an ID of "sumOfMultiplied"
+
+document.querySelector("#sumOfMultiplied").innerHTML = numbers.map(number => number*2).reduce((x, y) => x + y);
