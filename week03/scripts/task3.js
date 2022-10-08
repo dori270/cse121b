@@ -41,7 +41,7 @@ let subtract = function(minuend, subtrahend){
 
 let subtractNumbers = function(){
     let minuend = parseInt(document.querySelector("#minuend").value);
-    let subtrahend = document.querySelector("#subtrahend").value;
+    let subtrahend = parseInt(document.querySelector("#subtrahend").value);
     let difference = subtract(minuend, subtrahend);
     document.querySelector("#difference").value = difference;
 }
