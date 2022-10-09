@@ -6,7 +6,7 @@
 
 const bioInfo = {
     "name": "Savannah Rucker",
-    "photo": "..\images\myPhoto.jpeg",
+    "photo": "images\myPhoto.jpeg",
     "favoriteFoods": ["falafel", "hummus", "lasagne", "cereal"],
     "hobbies": ["coding", "teaching", "making school lunches"],
     "placesLived": {
@@ -37,13 +37,15 @@ const bioInfo = {
 
 // Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
 
-bioInfo.name = querySelector("#name").value
+bioInfo.name = document.querySelector("#name").value
 
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
 
-let 
+bioInfo.photo = document.querySelector("#photo").value
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
+
+
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
 
