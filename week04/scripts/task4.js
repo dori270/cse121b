@@ -7,7 +7,7 @@
 const bioInfo = {
     "name": "Savannah Rucker",
     "photo": "images\myPhoto.jpeg",
-    "favoriteFoods": ["falafel", "hummus", "lasagne", "cereal"],
+    "favFoods": ["falafel", "hummus", "lasagne", "cereal"],
     "hobbies": ["coding", "teaching", "making school lunches"],
     "placesLived": {
         "place": {"Albuquerque": "New Mexico", "Springfield": "Illinois"},
@@ -37,17 +37,25 @@ const bioInfo = {
 
 // Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
 
-bioInfo.name = document.querySelector("#name").value
+bioInfo.name = document.querySelector("#name").setAttribute
 
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
 
-bioInfo.photo = document.querySelector("#photo").value
+document.querySelector("#photo").value = bioInfo.photo
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
 
 
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
+let favFoods = document.getElementById("favFoods");
+for (let i = 0; i < favFoods.length; i++){
+    let listItem = document.createElement("li");
+    listItem.textContent = favFoods[i]; 
+    favFoods.append(listItem);
+}
+
+
 
 // Step 5: Append the <li> elements created above as children of the HTML <ul> element with an ID of favorite-foods
 
