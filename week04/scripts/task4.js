@@ -5,12 +5,16 @@
 // Step 1: Declare a new variable to hold information about yourself
 
 const bioInfo = {
-    name: "name",
-    foods: "foods",
-    hobbies: "hobbies",
-    placesLived: "places",
+    "name": "Savannah Rucker",
+    "photo": "..\images\myPhoto.jpeg",
+    "favoriteFoods": ["falafel", "hummus", "lasagne", "cereal"],
+    "hobbies": ["coding", "teaching", "making school lunches"],
+    "placesLived": {
+        "place": {"Albuquerque": "New Mexico", "Springfield": "Illinois"},
+        "length": {"4 years": "Land of Enchantment", "8 years": "Land of Lincoln"}
+    },
+};
 
-}
 
 // Step 2: Inside of the object, add a property named name with a value of your name as a string
 
@@ -33,7 +37,11 @@ const bioInfo = {
 
 // Step 1: Assign the value of the name property (of the object declared above) to the HTML <span> element with an ID of name
 
+bioInfo.name = querySelector("#name").value
+
 // Step 2: Assign the value of the photo property as the src attribute of the HTML <img> element with an ID of photo
+
+let 
 
 // Step 3: Assign the value of the name property as the alt attribute of the HTML <img> element with an ID of photo
 
