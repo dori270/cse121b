@@ -7,7 +7,7 @@
 const bioInfo = {
     "name": "Savannah Rucker",
     "photo": "images\myPhoto.jpeg",
-    "favFoods": ["falafel", "hummus", "lasagne", "cereal"],
+    "favoriteFoods": ["falafel", "hummus", "lasagne", "cereal"],
     "hobbies": ["coding", "teaching", "making school lunches"],
     "placesLived": {
         "place": {"Albuquerque": "New Mexico", "Springfield": "Illinois"},
@@ -48,11 +48,12 @@ document.querySelector("#photo").value = bioInfo.photo
 
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
-let favFoods = document.getElementById("favFoods");
-for (let i = 0; i < favFoods.length; i++){
+let favFoods = document.getElementById("favorite-Foods");
+
+for (let i = 0; i < favoriteFoods.length; i++){
     let listItem = document.createElement("li");
-    listItem.textContent = favFoods[i]; 
-    favFoods.append(listItem);
+    listItem.textContent = favoriteFoods[i]; 
+    favorite-Foods.append(listItem);
 }
 
 
@@ -68,3 +69,4 @@ for (let i = 0; i < favFoods.length; i++){
 // - Create an HTML <dd> element and put its length property in the <dd> element
 
 // Step 9: Append the HTML <dt> and <dd> elements created above to the HTML <dl> element with an ID of places-lived
+
