@@ -6,7 +6,9 @@
 
 const bioInfo = {
     name: "name",
-    
+    foods: "foods",
+    hobbies: "hobbies",
+    placesLived: "places",
 
 }
 
