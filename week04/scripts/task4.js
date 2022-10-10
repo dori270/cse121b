@@ -31,6 +31,7 @@ const bioInfo = {
 // Step 8: For each property, add appropriate values as strings
 
 // Step 9: Add additional objects with the same properties for each place you've lived
+// I don't understand what #9 is asking...
 
 
 /* OUTPUT */
@@ -48,6 +49,7 @@ document.querySelector("#photo").value = bioInfo.photo
 
 
 // Step 4: For each favorite food in the favoriteFoods property, create an HTML <li> element and place its value in the <li> element
+
 let favFoods = document.getElementById("favorite-Foods");
 
 for (let i = 0; i < favoriteFoods.length; i++){
