@@ -4,21 +4,44 @@
 
 // Step 1: Declare and initialize a new variable to hold the current date
 
+//let currentDate = Date.now();
+
 // Step 2: Declare another variable to hold the day of the week
+
+
 
 // Step 3: Using the variable declared in Step 1, assign the value of the variable declared in Step 2 to the day of the week ( hint: getDay() )
 
+let weekDay = currentDate.getDay(); 
+
 // Step 4: Declare a variable to hold a message that will be displayed
+
+let message1 = "Error";
 
 // Step 5: Using an if statement, if the day of the week is a weekday (i.e. Monday - Friday), set the message variable to the string 'Hang in there!'
 
+if(weekDay != 0 && weekDay != 6){
+    message1 = "Hang in there!";
+}
+
+
 // Step 6: Using an else statement, set the message variable to 'Woohoo!  It is the weekend!'
+else {
+    message1 = "Woohoo! It is the weekend!"
+}
+
+//document.querySelector("#message1").innerHTML = message1;
+
 
 /* SWITCH, CASE, BREAK */
 
 // Step 1: Declare a new variable to hold another message
 
+let message2 = "Error";
+
 // Step 2: Use switch, case and break to set the message variable to the day of the week as a string (e.g. Sunday, Monday, etc.) using the day of week variable declared in Step 2 above
+
+switch()
 
 /* OUTPUT */
 
