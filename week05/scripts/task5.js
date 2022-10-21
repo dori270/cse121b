@@ -85,6 +85,8 @@ const output = (templeList) => {
     templeList.forEach(element => {
         
     });
+
+//^^^^^Bro Blazzard's build: function output(data)
     
 // - Creates an HTML <article> element
 
@@ -92,23 +94,27 @@ const output = (templeList) => {
 
 // - Creates an HTML <h3> element and add the temple's templeName property to it
 
-    const newH3 = document.createElement("h3").templeName;
+    const newH3 = document.createElement("h3");
+    newH3.innerHTML = element.templeName;
 
 // - Creates an HTML <h4> element and add the temple's location property to it
 
-    const newH4 = document.createElement("h4").location; 
-//^^^^^is this correct?
+    const newH4 = document.createElement("h4");
+    newH4.innerHTML = element.location; 
+
 
 // - Creates an HTML <h4> element and add the temple's dedicated property to it
 
     const newH42 = document.createElement("h4");
-    newH42.dedicated = "Error";
+    newH42.innerHTML = element.dedicated;
 
 // - Creates an HTML <img> element and add the temple's imageUrl property to the src attribute and the temple's templeName property to the alt attribute
 
-//^^^^^^^This is throwing me for a loop, no pun intended...
-    //const imgHTML = document.createElement("img").imageUrl 
-    //imgHTML.setAttribute("imageURL") = document.querySelector("#").value(src);
+    const imgHTML = document.createElement("img");
+
+    //imgHTML.setAttribute("imageURL") = element.document.querySelector("#").value(src);
+    imgHTML.innerHTML = element.src; 
+    imgHTML.setAttribute('alt' , )
 
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 
@@ -117,7 +123,8 @@ const output = (templeList) => {
 
 // - Appends the <article> element to the HTML element with an ID of temples
 
-    document.querySelector("#temples").append(newArticle, id=temples);
+//  document.querySelector("#temples").append(newArticle, id=temples);
+//^^^^^^I get this error message: Uncaught DOMException: Failed to execute 'append' on 'Element': The new child element contains the parent.
 }
 
 // Step 3: Create another function called getTemples. Make it an async function.
@@ -131,6 +138,7 @@ async function getTemples() {
 // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). Store this in the templeList variable you declared earlier (Step 1). Make sure the the execution of the code waits here as well until it finishes.
 
     const templeList = await response.json();
+    console.log(response);
 }
 // Step 6: Finally, call the output function and pass it the list of temples. Execute your getTemples function to make sure it works correctly.
 
