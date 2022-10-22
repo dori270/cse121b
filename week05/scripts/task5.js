@@ -89,7 +89,7 @@ const output = (templeList) =>{
     
 // - Creates an HTML <article> element
 
-function doStuffWithData(){
+function doStuffWithData(element){
     const newArticle = document.createElement("article");
 
 // - Creates an HTML <h3> element and add the temple's templeName property to it
