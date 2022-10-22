@@ -81,15 +81,15 @@ const templeList = [ ];
 
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
 
-const output = (templeList) => {
-    templeList.forEach(element) => {
-        
-    
+const output = (templeList) =>{
+    templeList.forEach(doStuffWithData);
+}
 
 //^^^^^Bro Blazzard's build: function output(data)
     
 // - Creates an HTML <article> element
 
+function doStuffWithData(){
     const newArticle = document.createElement("article");
 
 // - Creates an HTML <h3> element and add the temple's templeName property to it
@@ -114,18 +114,21 @@ const output = (templeList) => {
 
     //imgHTML.setAttribute("imageURL") = element.document.querySelector("#").value(src);
     imgHTML.innerHTML = element.src; 
-    imgHTML.setAttribute('alt' , )
-    };
+    imgHTML.innerHTML = element.alt;
+
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 
-//^^^^^^^^imgHTML is not defined........
+    newArticle.append(newH3, newH4, newH42, imgHTML);
+
+};
+
     //c newArticle.append(newH3, newH4, newH42, imgHTML);
 
 // - Appends the <article> element to the HTML element with an ID of temples
 
 //  document.querySelector("#temples").append(newArticle, id=temples);
 //^^^^^^I get this error message: Uncaught DOMException: Failed to execute 'append' on 'Element': The new child element contains the parent.
-}
+
 
 // Step 3: Create another function called getTemples. Make it an async function.
 
