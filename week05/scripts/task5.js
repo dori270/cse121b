@@ -120,15 +120,13 @@ function doStuffWithData(){
 
     newArticle.append(newH3, newH4, newH42, imgHTML);
 
-};
-
     //c newArticle.append(newH3, newH4, newH42, imgHTML);
 
 // - Appends the <article> element to the HTML element with an ID of temples
 
-//  document.querySelector("#temples").append(newArticle, id=temples);
-//^^^^^^I get this error message: Uncaught DOMException: Failed to execute 'append' on 'Element': The new child element contains the parent.
+    document.querySelector("#temples").append(newArticle, id=temples);
 
+};
 
 // Step 3: Create another function called getTemples. Make it an async function.
 
