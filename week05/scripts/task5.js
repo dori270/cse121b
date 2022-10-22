@@ -82,9 +82,9 @@ const templeList = [ ];
 // Step 2: Declare a function named output that accepts a list of temples as an array argument and does the following for each temple:
 
 const output = (templeList) => {
-    templeList.forEach(element => {
+    templeList.forEach(element) => {
         
-    });
+    
 
 //^^^^^Bro Blazzard's build: function output(data)
     
@@ -115,7 +115,7 @@ const output = (templeList) => {
     //imgHTML.setAttribute("imageURL") = element.document.querySelector("#").value(src);
     imgHTML.innerHTML = element.src; 
     imgHTML.setAttribute('alt' , )
-
+    };
 // - Appends the <h3> element, the two <h4> elements, and the <img> element to the <article> element as children
 
 //^^^^^^^^imgHTML is not defined........
