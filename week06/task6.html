@@ -8,16 +8,48 @@
 </head>
 <body>
     <header>
-        <H1>The USed Car Calculator</H1>
-        
+        <H1>The Used Car Calculator</H1>
+        <hr>
     </header>
     <main>
         <h2>How to spot the best value in a used car:</h2>
-        <h3>A couple weeks ago our family car finally broke down. We will forever remember fondly the 2003 Pontiac Vibe that faithfully served our family for 12 years. The timing was fortuitous, however, as we are expecting our fourth child, and so a 5-passenger vehicle would no longer work for our entire family. So, with heavy hearts, we set off to find something that would seat our family and hopefully serve us as well as our dear Vibe. </h3>
-        <br> 
-        <h3>To help with our search, I devised a formula to help us sift through a web of 
-        <label id="mileage"></label>
+            <p>
+                 A couple weeks ago the transmission in our family car finally gave up the ghost. I loved that 2003 Pontiac Vibe. It had faithfully served our family for over 12 years. The timing was somewhat fortuitous, however, as we are expecting our fourth child in December, and a 5-passenger vehicle will no longer work for our entire family. So, with heavy hearts, we set off to find something that would seat our growing family and hopefully serve us as well as our dear, old Vibe. 
+            </p>
+        <hr>
+            <p>
+                To assist our search I devised a formula to sift through the world used cars and their inflation-bloated prices. The mathematics goes something like this: 
+            </p>
+            <p>
+                <strong>The price of the car/ (200,000 - the vehicle mileage) = a car's value</strong>
+            </p>
+            <p>
+                The resulting value is roughly the cost of a vehicle in a price-per-mile ratio. The lower the number, the better the value.
+            </p>
+        <hr>
+            <p> 
+                While there are many factors affecting the value of a vehicle, this formula gave me a standard metric with which to compare a wide assortment of vehicles and their prices. 
+            </p>
+        <hr>
+
         <section>
+    
+            <div class="container">
+                <h2>
+                    Car Value Genie
+                </h2>
+                <label>Enter vehicle year, make & model: <input type="text" id="vehicleName">
+                </label>
+    
+                <label>Enter list price: <input type="number" id="listPrice">
+                </label>
+    
+                <label>Enter odometer reading: <input type="number" id="odometer">
+                </label>
+            </div>
+        </section>
+        
+ <!--       <section>
             <h2>
                 Today is <span id="message2"></span>.
             </h2>
@@ -26,11 +58,13 @@
             </h3>
         </section>
         <section class="output"></section>
+    //-->
     </main>
     <footer>
 
     </footer>
-    <script src="main.js"></script>
+    <script src="main.js"></script> 
+
     
 </body>
 </html>
