@@ -15,13 +15,13 @@ button.addEventListener("click", costPerMile(listPrice, odometer));
 const vehicleValue.innerHTML = vehicleValue.value; 
 
 // initialize input variables
-let input1 = " "
+//let input1 = " "
 
 
 // set the selectors
-const vehicleName1Element = document.querySelector("#vehicleName1");
+//const vehicleName1Element = document.querySelector("#vehicleName1");
 
 
 // set the innerHTML properties of the selectors
-carNameElement1.innerHTML = input1;
+//carNameElement1.innerHTML = input1;
 
