@@ -9,8 +9,9 @@ function costPerMile (listPrice, odometer) {
     return vehicleValue;
 }
 
-const button = document.querySelector("#calculate");
-button.addEventListener("click", costPerMile(listPrice, odometer));
+const buttonElement = document.querySelector("#calculate");
+buttonElement.addEventListener("click", costPerMile(listPrice, odometer));
+
 
 const vehicleValue.innerHTML = vehicleValue.value; 
 
