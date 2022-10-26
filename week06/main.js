@@ -1,28 +1,28 @@
-const listPriceElement= document.querySelector("#listPrice");
-const odometerElement= document.querySelector("#odometer");
+const listPriceElement = document.querySelector("#listPrice");
+const odometerElement = document.querySelector("#odometer");
+const vehicleNameElement = document.querySelector("vehicleName");
+const buttonElement = document.querySelector("#calculate");
+const vehicleValueElement = document.querySelector("#vehicleValue");
+const message = document.querySelector("#message");
 
-listPriceElement.innerHTML = listPrice.value;
 
-
-function costPerMile (listPrice, odometer) {
-    const vehicleValue = listPrice/ (200000- odometer);
-    return vehicleValue;
+function costPerMile(lp, o) {
+    return lp / (200000 - o);
 }
 
-const buttonElement = document.querySelector("#calculate");
-buttonElement.addEventListener("click", costPerMile(listPrice, odometer));
+buttonElement.addEventListener("click", computeCost);
 
-
-const vehicleValue.innerHTML = vehicleValue.value; 
-
-// initialize input variables
-//let input1 = " "
-
-
-// set the selectors
-//const vehicleName1Element = document.querySelector("#vehicleName1");
-
-
-// set the innerHTML properties of the selectors
-//carNameElement1.innerHTML = input1;
+function computeCost() {
+    if (listPriceElement.value != "" && odometerElement.value != "") {
+        let listPrice = Number(listPriceElement.value);
+        let odometer = Number(odometerElement.value);
+        let cost = costPerMile(listPrice, odometer);
+        vehicleValueElement.innerHTML = `$${cost.toFixed(2)}`;
+        message.innerHTML = "";
+    } 
+    else{
+        listPriceElement.focus();
+        message.innerHTML = "Please enter a valid value";
+    }
+}
 
