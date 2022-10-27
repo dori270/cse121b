@@ -19,9 +19,10 @@ function computeCost() {
         let listPrice = Number(listPriceElement.value);
         let odometer = Number(odometerElement.value);
         let cost = costPerMile(listPrice, odometer);
-        vehicleValueElement.innerHTML = `$${cost.toFixed(2)}`;
+        let pricePerMile = cost.toFixed(2);
+        vehicleValueElement.innerHTML = `$${pricePerMile} per mile`;
         message.innerHTML = "";
-        carValues.push(cost);
+        carValues.push(`$${pricePerMile}`);
         firstPlaceElement.innerHTML = carValues; 
 
     } 
