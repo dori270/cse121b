@@ -4,7 +4,9 @@ const vehicleNameElement = document.querySelector("vehicleName");
 const buttonElement = document.querySelector("#calculate");
 const vehicleValueElement = document.querySelector("#vehicleValue");
 const message = document.querySelector("#message");
-
+const firstPlaceElement = document.querySelector("#firstPlace");
+const secondPlaceElement = document.querySelector("#secondPlace");
+let carValues = [];
 
 function costPerMile(lp, o) {
     return lp / (200000 - o);
@@ -19,6 +21,9 @@ function computeCost() {
         let cost = costPerMile(listPrice, odometer);
         vehicleValueElement.innerHTML = `$${cost.toFixed(2)}`;
         message.innerHTML = "";
+        carValues.push(cost);
+        firstPlaceElement.innerHTML = carValues; 
+
     } 
     else{
         listPriceElement.focus();
