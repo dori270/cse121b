@@ -2,6 +2,7 @@ const listPriceElement = document.querySelector("#listPrice");
 const odometerElement = document.querySelector("#odometer");
 const vehicleNameElement = document.querySelector("#vehicleName");
 const buttonElement = document.querySelector("#calculate");
+const buttonElement1 = document.querySelector("#reset"); 
 const vehicleValueElement = document.querySelector("#vehicleValue");
 const message = document.querySelector("#message");
 const vehicle1Element = document.querySelector("#vehicle5");
@@ -10,12 +11,18 @@ const vehicle3Element = document.querySelector("#vehicle3");
 const vehicle4Element = document.querySelector("#vehicle2");
 const vehicle5Element = document.querySelector("#vehicle1");
 const carValues = ["", "", "", "", ""]
+const form = document.querySelector("#form");
 
 function costPerMile(lp, o) {
     return lp / (200000 - o);
 }
 
 buttonElement.addEventListener("click", computeCost);
+buttonElement1.addEventListener("click", resetButton);
+
+function resetButton(){
+    form.reset();
+}
 
 function computeCost() {
     if (listPriceElement.value != "" && odometerElement.value != "") {
@@ -33,7 +40,7 @@ function computeCost() {
         vehicle3Element.innerHTML= carValues[2];
         vehicle4Element.innerHTML= carValues[3];
         vehicle5Element.innerHTML= carValues[4];
-
+        
         console.log(carValues) 
         }
         
